@@ -2,7 +2,7 @@
   "name": "new-vue-file",
   "displayName": "New Vue File",
   "description": "快速创建VUE组件",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "wtto00",
   "repository": "https://github.com/wtto00/new-vue-file",
   "engines": {
@@ -41,17 +41,17 @@
           "newVueFile.vue3": {
             "type": "boolean",
             "default": true,
-            "markdownDeprecationMessage": "是否使用Vue3版本"
+            "markdownDescription": "是否使用Vue3版本"
           },
           "newVueFile.ts": {
             "type": "boolean",
             "default": false,
-            "markdownDeprecationMessage": "是否使用typescript"
+            "markdownDescription": "是否使用typescript"
           },
           "newVueFile.separateScript": {
             "type": "boolean",
             "default": false,
-            "markdownDeprecationMessage": "script文件是否单独分离"
+            "markdownDescription": "script文件是否单独分离"
           },
           "newVueFile.style": {
             "type": "string",
@@ -62,22 +62,22 @@
               "less",
               "stylus"
             ],
-            "markdownDeprecationMessage": "选择css预处理语言"
+            "markdownDescription": "选择css预处理语言"
           },
           "newVueFile.separateStyle": {
             "type": "boolean",
             "default": false,
-            "markdownDeprecationMessage": "style文件是否单独分离"
+            "markdownDescription": "style文件是否单独分离"
           },
           "newVueFile.scrpitSetup": {
             "type": "boolean",
             "default": false,
-            "markdownDeprecationMessage": "是否使用script setup模式"
+            "markdownDescription": "是否使用script setup模式"
           },
           "newVueFile.folder": {
             "type": "boolean",
             "default": true,
-            "markdownDeprecationMessage": "是否创建同名目录"
+            "markdownDescription": "是否创建同名目录"
           }
         }
       }
