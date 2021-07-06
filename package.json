@@ -2,7 +2,7 @@
   "name": "new-vue-file",
   "displayName": "New Vue File",
   "description": "快速创建VUE组件",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "wtto00",
   "repository": "https://github.com/wtto00/new-vue-file",
   "engines": {
@@ -68,6 +68,11 @@
             "type": "boolean",
             "default": false,
             "markdownDescription": "style文件是否单独分离"
+          },
+          "newVueFile.scopedStyle": {
+            "type": "boolean",
+            "default": true,
+            "markdownDescription": "style样式隔离"
           },
           "newVueFile.scrpitSetup": {
             "type": "boolean",

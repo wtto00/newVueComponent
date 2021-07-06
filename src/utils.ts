@@ -4,7 +4,7 @@ import fs = require('fs');
 import path = require('path');
 
 export function genVueFileCode(dir: string, fileName: string) {
-  const { scrpitSetup, vue3, ts, style, separateStyle, separateScript, folder } = vscode.workspace.getConfiguration('newVueFile');
+  const { scrpitSetup, vue3, ts, style, separateStyle, scopedStyle, separateScript, folder } = vscode.workspace.getConfiguration('newVueFile');
   try {
     let basePath = dir;
     if (folder) {
@@ -69,6 +69,9 @@ ${scriptContent}`;
       styleAttr += ' src="./' + cssFile + '"';
       fs.writeFileSync(path.join(basePath, cssFile), '');
     }
+    if (scopedStyle) {
+      styleAttr += ' scoped';
+    }
 
     const vueContent = `<template>
   <div>${fileName}</div>
@@ -77,6 +80,7 @@ ${scriptContent}`;
 <script${scriptAttr}>${vueScriptContent}<\/script>
 
 <style${styleAttr}>${separateStyle ? '' : '\n\n'}<\/style>
+
 `;
     fs.writeFileSync(path.join(basePath, vueFile), vueContent);
   } catch (error) {

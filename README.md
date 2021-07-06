@@ -20,6 +20,7 @@
 | newVueFile.separateScript | boolean | true/false           | script 文件是否单独分离                       |
 | newVueFile.style          | string  | css/scss/less/stylus | 选择 css 预处理语言                           |
 | newVueFile.separateStyle  | boolean | true/false           | style 文件是否单独分离                        |
+| newVueFile.scopedStyle    | boolean | true/false           | style 样式是否组件隔离                        |
 | newVueFile.scrpitSetup    | boolean | true/false           | 是否使用 script setup 模式(vue3=false 时无效) |
 | newVueFile.folder         | boolean | true/false           | 是否创建同名目录                              |
 
@@ -32,6 +33,7 @@
   "newVueFile.separateScript": false,
   "newVueFile.style": "css",
   "newVueFile.separateStyle": false,
+  "newVueFile.scopedStyle": true,
   "newVueFile.scrpitSetup": false,
   "newVueFile.folder": true
 }
