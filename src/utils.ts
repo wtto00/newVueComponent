@@ -3,11 +3,11 @@ import * as vscode from 'vscode';
 import fs = require('fs');
 import path = require('path');
 
-export function genVueFileCode(dir: string, fileName: string) {
+export function genVueFileCode(dir: string, fileName: string, withoutFolder: boolean = false) {
   const { scrpitSetup, vue3, ts, style, separateStyle, scopedStyle, separateScript, folder } = vscode.workspace.getConfiguration('newVueFile');
   try {
     let basePath = dir;
-    if (folder) {
+    if (folder && !withoutFolder) {
       basePath = path.join(basePath, fileName);
       if (!fs.existsSync(basePath)) {
         fs.mkdirSync(path.join(dir, fileName));

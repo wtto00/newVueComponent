@@ -4,6 +4,10 @@ All notable changes to the "new-vue-file" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.4]
+
+- 添加`创建Vue组件(无目录)`右键菜单
+
 ## [0.0.3]
 
 - 添加样式分离 `scoped` 属性

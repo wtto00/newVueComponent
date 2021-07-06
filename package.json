@@ -2,7 +2,7 @@
   "name": "new-vue-file",
   "displayName": "New Vue File",
   "description": "快速创建VUE组件",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "wtto00",
   "repository": "https://github.com/wtto00/new-vue-file",
   "engines": {
@@ -22,12 +22,22 @@
         "command": "new-vue-file.newVueFile",
         "title": "创建Vue组件",
         "category": "Vue"
+      },
+      {
+        "command": "new-vue-file.newVueFileWithoutFolder",
+        "title": "创建Vue组件(无目录)",
+        "category": "Vue"
       }
     ],
     "menus": {
       "explorer/context": [
         {
           "command": "new-vue-file.newVueFile",
+          "group": "1_modification",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "new-vue-file.newVueFileWithoutFolder",
           "group": "1_modification",
           "when": "explorerResourceIsFolder"
         }

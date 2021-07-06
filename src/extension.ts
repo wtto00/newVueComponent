@@ -30,6 +30,24 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   context.subscriptions.push(disposable);
+
+  let newVueFileWithoutFolder = vscode.commands.registerCommand('new-vue-file.newVueFileWithoutFolder', async (uri: vscode.Uri) => {
+    // The code you place here will be executed every time your command is executed
+		const result = await vscode.window.showInputBox({
+			value: 'newVueFileWithoutFolder',
+			valueSelection: [0, 14],
+			placeHolder: '请输入组件名称',
+		});
+		if (!result?.trim()) {
+			vscode.window.showInformationMessage('请输入Vue组件名称');
+			return;
+		}
+		
+    const dirPath = uri.fsPath;
+    genVueFileCode(dirPath, result, true);
+  });
+
+  context.subscriptions.push(newVueFileWithoutFolder);
 }
 
 // this method is called when your extension is deactivated
