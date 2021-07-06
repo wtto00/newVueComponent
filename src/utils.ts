@@ -80,7 +80,6 @@ ${scriptContent}`;
 <script${scriptAttr}>${vueScriptContent}<\/script>
 
 <style${styleAttr}>${separateStyle ? '' : '\n\n'}<\/style>
-
 `;
     fs.writeFileSync(path.join(basePath, vueFile), vueContent);
   } catch (error) {

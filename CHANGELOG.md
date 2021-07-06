@@ -4,6 +4,18 @@ All notable changes to the "new-vue-file" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.3]
+
+- 添加样式分离 `scoped` 属性
+
+## [0.0.2]
+
+- 修改设置选项的描述文字
+
+## [0.0.1]
+
+- 第一个版本
+
 ## [Unreleased]
 
 - Initial release
