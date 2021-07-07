@@ -15,9 +15,10 @@ export function activate(context: vscode.ExtensionContext) {
   // The commandId parameter must match the command field in package.json
   let disposable = vscode.commands.registerCommand('new-vue-file.newVueFile', async (uri: vscode.Uri) => {
     // The code you place here will be executed every time your command is executed
+    const name = 'NewVueFile';
 		const result = await vscode.window.showInputBox({
-			value: 'NewVueFile',
-			valueSelection: [0, 14],
+			value: name,
+			valueSelection: [0, name.length],
 			placeHolder: '请输入组件名称',
 		});
 		if (!result?.trim()) {
@@ -32,10 +33,10 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(disposable);
 
   let newVueFileWithoutFolder = vscode.commands.registerCommand('new-vue-file.newVueFileWithoutFolder', async (uri: vscode.Uri) => {
-    // The code you place here will be executed every time your command is executed
+    const name = 'NewVueFileWithoutFolder';
 		const result = await vscode.window.showInputBox({
-			value: 'newVueFileWithoutFolder',
-			valueSelection: [0, 14],
+			value: name,
+			valueSelection: [0, name.length],
 			placeHolder: '请输入组件名称',
 		});
 		if (!result?.trim()) {

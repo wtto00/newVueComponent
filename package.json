@@ -2,7 +2,7 @@
   "name": "new-vue-file",
   "displayName": "New Vue File",
   "description": "快速创建VUE组件",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "wtto00",
   "repository": "https://github.com/wtto00/new-vue-file",
   "engines": {

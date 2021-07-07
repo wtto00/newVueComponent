@@ -4,6 +4,10 @@ All notable changes to the "new-vue-file" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.5]
+
+- 修复`创建Vue组件(无目录)`默认名称没有全部选中的问题
+
 ## [0.0.4]
 
 - 添加`创建Vue组件(无目录)`右键菜单
