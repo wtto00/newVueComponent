@@ -17,11 +17,11 @@
 | ------------------------------ | ------- | -------------------- | --------------------------------------------- |
 | newVueComponent.vue3           | boolean | true/false           | 是否使用 Vue3 版本                            |
 | newVueComponent.ts             | boolean | true/false           | 是否使用 typescript                           |
-| newVueComponent.separateScript | boolean | true/false           | script 文件是否单独分离                       |
-| newVueComponent.style          | string  | css/scss/less/stylus | 选择 css 预处理语言                           |
-| newVueComponent.separateStyle  | boolean | true/false           | style 文件是否单独分离                        |
-| newVueComponent.scopedStyle    | boolean | true/false           | style 样式是否组件隔离                        |
+| newVueComponent.scriptSeparate | boolean | true/false           | script 文件是否单独分离                       |
 | newVueComponent.scrpitSetup    | boolean | true/false           | 是否使用 script setup 模式(vue3=false 时无效) |
+| newVueComponent.style          | string  | css/scss/less/stylus | 选择 css 预处理语言                           |
+| newVueComponent.styleSeparate  | boolean | true/false           | style 文件是否单独分离                        |
+| newVueComponent.styleScoped    | boolean | true/false           | style 样式是否组件隔离                        |
 | newVueComponent.folder         | boolean | true/false           | 是否创建同名目录                              |
 
 ### Default Setting
@@ -30,11 +30,11 @@
 {
   "newVueComponent.vue3": true,
   "newVueComponent.ts": false,
-  "newVueComponent.separateScript": false,
-  "newVueComponent.style": "css",
-  "newVueComponent.separateStyle": false,
-  "newVueComponent.scopedStyle": true,
+  "newVueComponent.scriptSeparate": false,
   "newVueComponent.scrpitSetup": false,
+  "newVueComponent.style": "css",
+  "newVueComponent.styleSeparate": false,
+  "newVueComponent.styleScoped": true,
   "newVueComponent.folder": true
 }
 ```

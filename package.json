@@ -58,10 +58,15 @@
             "default": false,
             "markdownDescription": "是否使用typescript"
           },
-          "newVueComponent.separateScript": {
+          "newVueComponent.scriptSeparate": {
             "type": "boolean",
             "default": false,
             "markdownDescription": "script文件是否单独分离"
+          },
+          "newVueComponent.scrpitSetup": {
+            "type": "boolean",
+            "default": false,
+            "markdownDescription": "是否使用script setup模式"
           },
           "newVueComponent.style": {
             "type": "string",
@@ -74,20 +79,15 @@
             ],
             "markdownDescription": "选择css预处理语言"
           },
-          "newVueComponent.separateStyle": {
+          "newVueComponent.styleSeparate": {
             "type": "boolean",
             "default": false,
             "markdownDescription": "style文件是否单独分离"
           },
-          "newVueComponent.scopedStyle": {
+          "newVueComponent.styleScoped": {
             "type": "boolean",
             "default": true,
             "markdownDescription": "style样式隔离"
-          },
-          "newVueComponent.scrpitSetup": {
-            "type": "boolean",
-            "default": false,
-            "markdownDescription": "是否使用script setup模式"
           },
           "newVueComponent.folder": {
             "type": "boolean",

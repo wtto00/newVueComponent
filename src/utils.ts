@@ -4,7 +4,7 @@ import fs = require('fs');
 import path = require('path');
 
 export function genVueFileCode(dir: string, fileName: string, withoutFolder: boolean = false) {
-  const { scrpitSetup, vue3, ts, style, separateStyle, scopedStyle, separateScript, folder } = vscode.workspace.getConfiguration('newVueComponent');
+  const { scrpitSetup, vue3, ts, style, styleSeparate, styleScoped, scriptSeparate, folder } = vscode.workspace.getConfiguration('newVueComponent');
   try {
     let basePath = dir;
     if (folder && !withoutFolder) {
@@ -43,7 +43,7 @@ export default defineComponent({
     if (ts) {
       scriptAttr += ' lang="ts"';
     }
-    if (separateScript) {
+    if (scriptSeparate) {
       scriptAttr += ' src="./' + jsFile + '"';
     } else {
       if (vue3 && scrpitSetup) {
@@ -57,7 +57,7 @@ ${scriptContent}`;
       }
     }
 
-    if (separateScript) {
+    if (scriptSeparate) {
       fs.writeFileSync(path.join(basePath, jsFile), scriptContent);
     }
 
@@ -65,11 +65,11 @@ ${scriptContent}`;
     if (style !== 'css') {
       styleAttr += ' lang="' + style + '"';
     }
-    if (separateStyle) {
+    if (styleSeparate) {
       styleAttr += ' src="./' + cssFile + '"';
       fs.writeFileSync(path.join(basePath, cssFile), '');
     }
-    if (scopedStyle) {
+    if (styleScoped) {
       styleAttr += ' scoped';
     }
 
@@ -79,7 +79,7 @@ ${scriptContent}`;
 
 <script${scriptAttr}>${vueScriptContent}<\/script>
 
-<style${styleAttr}>${separateStyle ? '' : '\n\n'}<\/style>
+<style${styleAttr}>${styleSeparate ? '' : '\n\n'}<\/style>
 `;
     fs.writeFileSync(path.join(basePath, vueFile), vueContent);
   } catch (error) {
