@@ -4,7 +4,7 @@ import fs = require('fs');
 import path = require('path');
 
 export function genVueFileCode(dir: string, fileName: string, withoutFolder: boolean = false) {
-  const { scrpitSetup, vue3, ts, style, separateStyle, scopedStyle, separateScript, folder } = vscode.workspace.getConfiguration('newVueFile');
+  const { scrpitSetup, vue3, ts, style, separateStyle, scopedStyle, separateScript, folder } = vscode.workspace.getConfiguration('newVueComponent');
   try {
     let basePath = dir;
     if (folder && !withoutFolder) {

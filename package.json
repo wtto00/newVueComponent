@@ -1,10 +1,10 @@
 {
-  "name": "new-vue-file",
-  "displayName": "New Vue File",
+  "name": "newVueComponent",
+  "displayName": "New Vue Component",
   "description": "快速创建VUE组件",
   "version": "0.0.5",
   "publisher": "wtto00",
-  "repository": "https://github.com/wtto00/new-vue-file",
+  "repository": "https://github.com/wtto00/newVueComponent",
   "engines": {
     "vscode": "^1.56.0"
   },
@@ -13,18 +13,18 @@
   ],
   "activationEvents": [
     "onLanguage:vue",
-    "onCommand:new-vue-file.newVueFile"
+    "onCommand:newVueComponent.newVueComponent"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "new-vue-file.newVueFile",
+        "command": "newVueComponent.newVueComponent",
         "title": "创建Vue组件",
         "category": "Vue"
       },
       {
-        "command": "new-vue-file.newVueFileWithoutFolder",
+        "command": "newVueComponent.newVueComponentWithoutFolder",
         "title": "创建Vue组件(无目录)",
         "category": "Vue"
       }
@@ -32,12 +32,12 @@
     "menus": {
       "explorer/context": [
         {
-          "command": "new-vue-file.newVueFile",
+          "command": "newVueComponent.newVueComponent",
           "group": "1_modification",
           "when": "explorerResourceIsFolder"
         },
         {
-          "command": "new-vue-file.newVueFileWithoutFolder",
+          "command": "newVueComponent.newVueComponentWithoutFolder",
           "group": "1_modification",
           "when": "explorerResourceIsFolder"
         }
@@ -46,24 +46,24 @@
     "configuration": [
       {
         "type": "object",
-        "title": "New Vue File设置",
+        "title": "New Vue Component",
         "properties": {
-          "newVueFile.vue3": {
+          "newVueComponent.vue3": {
             "type": "boolean",
             "default": true,
             "markdownDescription": "是否使用Vue3版本"
           },
-          "newVueFile.ts": {
+          "newVueComponent.ts": {
             "type": "boolean",
             "default": false,
             "markdownDescription": "是否使用typescript"
           },
-          "newVueFile.separateScript": {
+          "newVueComponent.separateScript": {
             "type": "boolean",
             "default": false,
             "markdownDescription": "script文件是否单独分离"
           },
-          "newVueFile.style": {
+          "newVueComponent.style": {
             "type": "string",
             "default": "css",
             "enum": [
@@ -74,22 +74,22 @@
             ],
             "markdownDescription": "选择css预处理语言"
           },
-          "newVueFile.separateStyle": {
+          "newVueComponent.separateStyle": {
             "type": "boolean",
             "default": false,
             "markdownDescription": "style文件是否单独分离"
           },
-          "newVueFile.scopedStyle": {
+          "newVueComponent.scopedStyle": {
             "type": "boolean",
             "default": true,
             "markdownDescription": "style样式隔离"
           },
-          "newVueFile.scrpitSetup": {
+          "newVueComponent.scrpitSetup": {
             "type": "boolean",
             "default": false,
             "markdownDescription": "是否使用script setup模式"
           },
-          "newVueFile.folder": {
+          "newVueComponent.folder": {
             "type": "boolean",
             "default": true,
             "markdownDescription": "是否创建同名目录"
