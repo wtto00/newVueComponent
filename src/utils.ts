@@ -81,7 +81,19 @@ ${scriptContent}`;
 
 <style${styleAttr}>${styleSeparate ? '' : '\n\n'}<\/style>
 `;
-    fs.writeFileSync(path.join(basePath, vueFile), vueContent);
+const vueFielPath = path.join(basePath, vueFile);
+    fs.writeFileSync(vueFielPath, vueContent);
+
+    vscode.workspace.openTextDocument(vueFielPath)
+    .then(doc => {
+        // 在VSCode编辑窗口展示读取到的文本
+        vscode.window.showTextDocument(doc);
+    }, err => {
+        console.log(`Open ${vueFielPath} error, ${err}.`);
+    }).then(undefined, err => {
+        console.log(`Open ${vueFielPath} error, ${err}.`);
+    });
+
   } catch (error) {
     vscode.window.showInformationMessage(error.message);
   }

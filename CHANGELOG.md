@@ -4,6 +4,12 @@ All notable changes to the "newVueComponent" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.6]
+
+- 修改插件名称
+- 修改插件设置项名称
+- 创建组件文件后自动打开该文件
+
 ## [0.0.5]
 
 - 修复`创建Vue组件(无目录)`默认名称没有全部选中的问题
