@@ -26,6 +26,9 @@ jobs:
       - uses: actions/setup-node@v3.1.0
         with:
           node-version: 16
+          cache: 'yarn'
+      - run: yarn install
+
       - name: Publish to Visual Studio Marketplace
         uses: HaaLeo/publish-vscode-extension@v1
         with:
