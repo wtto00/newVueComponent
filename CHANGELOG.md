@@ -4,6 +4,12 @@ All notable changes to the "newVueComponent" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.7]
+
+- 更新插件版本
+
+> 老版本的 [vscode-test](https://classic.yarnpkg.com/en/package/vscode-test) 提示有安全问题，按照要求更新为 [@vscode/test-electron](https://www.npmjs.com/package/@vscode/test-electron)
+
 ## [0.0.6]
 
 - 修改插件名称

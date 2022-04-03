@@ -85,7 +85,7 @@ const vueFielPath = path.join(basePath, vueFile);
     fs.writeFileSync(vueFielPath, vueContent);
 
     vscode.workspace.openTextDocument(vueFielPath)
-    .then(doc => {
+    .then((doc:any) => {
         // 在VSCode编辑窗口展示读取到的文本
         vscode.window.showTextDocument(doc);
     }, err => {
@@ -94,7 +94,7 @@ const vueFielPath = path.join(basePath, vueFile);
         console.log(`Open ${vueFielPath} error, ${err}.`);
     });
 
-  } catch (error) {
+  } catch (error:any) {
     vscode.window.showInformationMessage(error.message);
   }
 }
