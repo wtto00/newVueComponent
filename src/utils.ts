@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import localize from "./i18n";
 
 import fs = require('fs');
 import path = require('path');
@@ -14,7 +15,7 @@ export function genVueFileCode(dir: string, fileName: string, withoutFolder: boo
       } else {
         const file = fs.statSync(basePath);
         if (!file.isDirectory()) {
-          vscode.window.showInformationMessage('此目录已存在同名文件');
+          vscode.window.showInformationMessage(localize('sameFileName'));
           return;
         }
       }

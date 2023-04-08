@@ -1,0 +1,5 @@
+{
+  "componentName": "Please enter the component name",
+  "vueComponentName": "Please enter the name of Vue component",
+  "sameFileName": "A file with the same name already exists in this directory"
+}
