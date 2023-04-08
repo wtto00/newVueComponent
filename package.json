@@ -1,8 +1,8 @@
 {
-  "name": "new-vue-component",
+  "name": "newVueComponent",
   "displayName": "New Vue Component",
   "description": "快速创建VUE组件",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "publisher": "wtto00",
   "repository": "https://github.com/wtto00/newVueComponent",
   "engines": {

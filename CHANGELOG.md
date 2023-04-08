@@ -4,7 +4,7 @@ All notable changes to the "newVueComponent" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [0.1.0]
+## [0.1.2]
 
 - 使用最新版 [Yeoman@4.3.1](https://yeoman.io/) & [generator-code@1.7.5](https://www.npmjs.com/package/generator-code) 重构。
 - 添加了多语言支持，现在支持 `zh-CN` 和 `En`。
