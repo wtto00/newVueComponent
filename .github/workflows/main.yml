@@ -23,14 +23,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: latest
       - uses: actions/setup-node@v3.1.0
         with:
           node-version: 16
-          cache: 'pnpm'
-      - run: pnpm install --frozen-lockfile
+      - run: npm install
 
       - name: Publish to Visual Studio Marketplace
         uses: HaaLeo/publish-vscode-extension@v1
