@@ -17,7 +17,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Lint_Test:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -25,11 +25,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: latest
       - uses: actions/setup-node@v3.1.0
         with:
           node-version: 16
-          cache: 'yarn'
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn test
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm test
