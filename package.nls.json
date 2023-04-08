@@ -1,0 +1,13 @@
+{
+  "commands.newVueComponent": "Create Vue Component",
+  "commands.newVueComponentWithoutFolder": "Create Vue Component (Without Folder)",
+
+  "configuration.vue3": "Whether to use Vue 3 version",
+  "configuration.ts": "Whether to use TypeScript",
+  "configuration.scriptSeparate": "Whether to separate script file",
+  "configuration.scrpitSetup": "Whether to use script setup mode",
+  "configuration.style": "Select CSS preprocessor language",
+  "configuration.styleSeparate": "Whether to separate style file",
+  "configuration.styleScoped": "Style isolation",
+  "configuration.folder": "Whether to create directory with component name"
+}

@@ -1,0 +1,13 @@
+{
+  "commands.newVueComponent": "创建Vue组件",
+  "commands.newVueComponentWithoutFolder": "创建Vue组件(无目录)",
+
+  "configuration.vue3": "是否使用Vue3版本",
+  "configuration.ts": "是否使用TypeScript",
+  "configuration.scriptSeparate": "script文件是否单独分离",
+  "configuration.scrpitSetup": "是否使用script setup模式",
+  "configuration.style": "选择css预处理语言",
+  "configuration.styleSeparate": "style文件是否单独分离",
+  "configuration.styleScoped": "style样式隔离",
+  "configuration.folder": "是否创建同名目录"
+}
