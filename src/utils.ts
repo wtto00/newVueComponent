@@ -4,7 +4,7 @@ import localize from "./i18n";
 import fs = require('fs');
 import path = require('path');
 
-export function genVueFileCode(dir: string, fileName: string, withoutFolder: boolean = false) {
+export function genVueFileCode(dir: string, fileName: string, withoutFolder = false) {
   const { scrpitSetup, vue3, ts, style, styleSeparate, styleScoped, scriptSeparate, folder } = vscode.workspace.getConfiguration('newVueComponent');
   try {
     let basePath = dir;
@@ -78,15 +78,15 @@ ${scriptContent}`;
   <div>${fileName}</div>
 </template>
 
-<script${scriptAttr}>${vueScriptContent}<\/script>
+<script${scriptAttr}>${vueScriptContent}</script>
 
-<style${styleAttr}>${styleSeparate ? '' : '\n\n'}<\/style>
+<style${styleAttr}>${styleSeparate ? '' : '\n\n'}</style>
 `;
 const vueFielPath = path.join(basePath, vueFile);
     fs.writeFileSync(vueFielPath, vueContent);
 
     vscode.workspace.openTextDocument(vueFielPath)
-    .then((doc:any) => {
+    .then((doc:vscode.TextDocument) => {
         // 在VSCode编辑窗口展示读取到的文本
         vscode.window.showTextDocument(doc);
     }, err => {
@@ -95,7 +95,7 @@ const vueFielPath = path.join(basePath, vueFile);
         console.log(`Open ${vueFielPath} error, ${err}.`);
     });
 
-  } catch (error:any) {
-    vscode.window.showInformationMessage(error.message);
+  } catch (error:unknown) {
+    vscode.window.showInformationMessage((error as Error).message);
   }
 }
