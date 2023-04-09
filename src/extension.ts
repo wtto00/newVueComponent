@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let newVueComponent = vscode.commands.registerCommand('newVueComponent.newVueComponent', async (uri: vscode.Uri) => {
+	const newVueComponent = vscode.commands.registerCommand('newVueComponent.newVueComponent', async (uri: vscode.Uri) => {
     // The code you place here will be executed every time your command is executed
     const name = 'newVueComponent';
 		const result = await vscode.window.showInputBox({
@@ -34,7 +34,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(newVueComponent);
 
-  let newVueComponentWithoutFolder = vscode.commands.registerCommand('newVueComponent.newVueComponentWithoutFolder', async (uri: vscode.Uri) => {
+  const newVueComponentWithoutFolder = vscode.commands.registerCommand('newVueComponent.newVueComponentWithoutFolder', async (uri: vscode.Uri) => {
     const name = 'newVueComponentWithoutFolder';
 		const result = await vscode.window.showInputBox({
 			value: name,
@@ -54,4 +54,6 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() {
+	// do nothing
+}
