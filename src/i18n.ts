@@ -7,7 +7,7 @@ const locale = vscode.env.language.startsWith('zh-') ? zh : en;
 export default (key:keyof typeof locale) => {
   try {
     return locale[key] ?? key;
-  } catch (error) {
+  } catch (_error) {
     return key;
   }
 };
