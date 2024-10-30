@@ -110,7 +110,7 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@eslint/js": "^9.11.0",
+    "@eslint/js": "^9.13.0",
     "@types/glob": "^8.1.0",
     "@types/i18n": "^0.13.12",
     "@types/mocha": "^10.0.8",
